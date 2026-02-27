@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do list</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="app">
+  <div class="card">
+    <h1>🚀 Productivity Pro</h1>
+
+    <div class="input-row">
+      <input id="taskInput" placeholder="What needs to be done?">
+      <select id="categoryInput">
+        <option>Work</option>
+        <option>Study</option>
+        <option>Personal</option>
+      </select>
+      <input type="date" id="deadlineInput">
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <div class="controls">
+      <button onclick="setFilter('all')">All</button>
+      <button onclick="setFilter('pending')">Pending</button>
+      <button onclick="setFilter('completed')">Done</button>
+      <button id="themeBtn" onclick="toggleTheme()">
+        <i data-lucide="sun"></i>
+    </button>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <ul id="taskList"></ul>
+    <ul id="doneList"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+</body>
+</html>
